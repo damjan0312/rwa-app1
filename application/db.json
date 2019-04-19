@@ -1,0 +1,64 @@
+{
+  "fights": [
+    {
+      "id": "1",
+      "fighter1": "Max Holloway",
+      "fighter2": "Dustin Poirier",
+      "type": "Interim lightweight title",
+      "date": "4/14/2019",
+      "venue": "State Farm Venue, Atlanta",
+      "analysis": "",
+      "mmaOrganization": 1
+    },
+    {
+      "id": "2",
+      "fighter1": "Kelvin Gustelum",
+      "fighter2": "Israel Adesanya",
+      "type": "Interim middleweight title",
+      "date": "4/14/2019",
+      "venue": "State Farm Venue, Atlanta",
+      "analysis": "",
+      "mmaOrganization": 1
+    },
+    {
+      "id": "3",
+      "fighter1": "Eryk Anders",
+      "fighter2": "Khalil Rountree Jr.",
+      "type": "non-title fight",
+      "date": "4/14/2019",
+      "venue": "State Farm Venue, Atlanta",
+      "analysis": "",
+      "mmaOrganization": 1
+    },
+    {
+      "id": 6,
+      "fighter1": "dsa",
+      "fighter2": "dsa",
+      "type": "dsad",
+      "date": "2019-04-09",
+      "venue": "dsad",
+      "analysis": "dsad",
+      "mmaOrganization": 1
+    },
+    {
+      "id": 7,
+      "fighter1": "dsaddddddddd",
+      "fighter2": "dsa",
+      "type": "dsad",
+      "date": "2019-04-09",
+      "venue": "dsad",
+      "analysis": "dsad",
+      "mmaOrganization": 1
+    },
+    {
+      "id": 8,
+      "fighter1": "",
+      "fighter2": "",
+      "type": "",
+      "date": "",
+      "venue": "",
+      "analysis": "",
+      "mmaOrganization": 1
+    }
+  ]
+}
