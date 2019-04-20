@@ -5,9 +5,9 @@
       "fighter1": "Max Holloway",
       "fighter2": "Dustin Poirier",
       "type": "Interim lightweight title",
-      "date": "4/14/2019",
+      "date": "2019-04-4",
       "venue": "State Farm Venue, Atlanta",
-      "analysis": "",
+      "analysis": "dasads",
       "mmaOrganization": 1
     },
     {
@@ -15,9 +15,9 @@
       "fighter1": "Kelvin Gustelum",
       "fighter2": "Israel Adesanya",
       "type": "Interim middleweight title",
-      "date": "4/14/2019",
+      "date": "2019-04-4",
       "venue": "State Farm Venue, Atlanta",
-      "analysis": "",
+      "analysis": "13241343657687",
       "mmaOrganization": 1
     },
     {
@@ -25,39 +25,19 @@
       "fighter1": "Eryk Anders",
       "fighter2": "Khalil Rountree Jr.",
       "type": "non-title fight",
-      "date": "4/14/2019",
+      "date": "2019-04-4",
       "venue": "State Farm Venue, Atlanta",
-      "analysis": "",
+      "analysis": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
       "mmaOrganization": 1
     },
     {
-      "id": 6,
-      "fighter1": "dsa",
-      "fighter2": "dsa",
+      "id": 5,
+      "fighter1": "dsad",
+      "fighter2": "dsad",
       "type": "dsad",
-      "date": "2019-04-09",
+      "date": "dsad",
       "venue": "dsad",
-      "analysis": "dsad",
-      "mmaOrganization": 1
-    },
-    {
-      "id": 7,
-      "fighter1": "dsaddddddddd",
-      "fighter2": "dsa",
-      "type": "dsad",
-      "date": "2019-04-09",
-      "venue": "dsad",
-      "analysis": "dsad",
-      "mmaOrganization": 1
-    },
-    {
-      "id": 8,
-      "fighter1": "",
-      "fighter2": "",
-      "type": "",
-      "date": "",
-      "venue": "",
-      "analysis": "",
+      "analysis": "dasd",
       "mmaOrganization": 1
     }
   ]
