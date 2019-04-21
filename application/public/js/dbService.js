@@ -1,9 +1,11 @@
 import { MMAorganization } from "../js/mmaOrganization"
 import { Fight } from "../js/fight"
 
-import { Observable } from "rxjs";
+import { Observable, fromPromise } from "rxjs";
 
 export class DBService{
+
+    
 
     add(organization)
     {
@@ -16,16 +18,13 @@ export class DBService{
         let mmaOrganization = organization.ID;
        
 
-        let newFight = new Fight(1, fighter1, fighter2, type, date, venue, analysis, mmaOrganization);
-        
+        let newFight = new Fight(15, fighter1, fighter2, type, date, venue, analysis, mmaOrganization);
 
-        console.log(newFight);
-        organization.addFight(newFight);
+        let fightID= organization.arrLength() + 1; //organization.arr.length+1;
 
+        console.log("ID: " + fightID);
 
-        let fightID=organization.arr.length+1;
-
-        fetch("http://localhost:3000/fights/", {
+        fetch("http://localhost:3000/fights", {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +41,8 @@ export class DBService{
             })
         })
         .then(response => {
-            console.log( response);
+            console.log("ADDING SUCCESS!!!!");
+            organization.addIntoArray(newFight);
         })
         .catch(response => { console.log(response) })
         
@@ -78,9 +78,32 @@ export class DBService{
             })
         })
         .then(response => {
-            console.log( response);
+            console.log("UPDATE SUCCESS!!!!");
+            organization.displayThemAll();
         })
         .catch(response => { console.log(response) })
+        
+    }
+
+    delete(id) {
+
+        let url = 'http://localhost:3000/fights/' + id;
+
+        console.log();
+
+            fetch(url, {
+                method: 'delete',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(response => {
+                console.log("DELETE SUCCESS!!!!");
+                var organization = new MMAorganization(1);
+                organization.displayThemAll();
+            })
+            .catch(err => console.log(err)) 
         
     }
 

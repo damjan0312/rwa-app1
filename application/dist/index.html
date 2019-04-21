@@ -7,20 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beyond the octagon</title>
 
+    <!-- CSS -->
+    <link type="text/css" href="./css/index.css">
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="header" class="bg-light p-3">
-        <h1 class="text-center display-4">BEYOND THE OCTAGON</h1>
-    </div>
-    <section class="fight-section row">
+        <nav class="navbar navbar-dark fixed-top bg-custom-2">
+                <div class="container">
+                  <a class="navbar-brand" href="#a">BootstrapBay</a>
+                </div>
+        </nav>
+
+
+    <section id="section-first" class="fight-section row p-5 mt-5">
 
         <div id="fight-sec-left" class="col-md-6" style="border: 1px solid lightgrey;">
             <h3 class="text-center display-4">Already analyzed fights</h3>
-            <button id="btnShow" class="btn btn-danger m-3">Fights</button>
+            <div id="showThem">
+
+            </div>
         </div>
         <div id="fight-sec-right" class="col-md-6" style="border: 1px solid lightgrey;">
             <h3 id="add-update"class="text-center display-4 mb-4">Add fight</h3>

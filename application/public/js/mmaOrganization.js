@@ -1,41 +1,70 @@
 import { FightService } from './dbService';
 import { Fight } from './fight';
-import { of } from "rxjs";
+import { Observable, of, from } from "rxjs";
+import { flatMap, skip } from "rxjs/operators"
 
+export const url = "http://localhost:3000/fights";
 
+export class MMAorganization {
 
-export class MMAorganization{
-
-    constructor(id){
+    constructor(id) {
         this.arr = [];
         this.ID = id;
+        this.element = 0; // broj elemenata u nizu
     }
 
-    addFight(fight){
-        this.arr.push(fight);
-    }
-
-    getFights(){
-        let get = fetch("http://localhost:3000/fights/")
+    fetchData() {
+        return Observable.create(observer => {
+            fetch(url)
                 .then(response => response.json())
-                .then(response => {
-                    response.forEach(f => {
-                        
-                        let fight = new Fight(f.id, f.fighter1, f.fighter2, f.type, f.date, f.venue, f.analysis, this.ID);
-                   
-                        this.addFight(fight);
-                    });
-                });
+                .then(data => {
+                    observer.next(data);
+                })
+                .catch(err => observer.error(err));
+        })
+    }
+    fillTheArray() {
+        const obs$ = this.fetchData();
+
+        const sub = obs$.subscribe(value => {
+            this.arr.push(new Fight(fight.id, fight.fighter1, fight.fighter2,
+                fight.type, fight.date, fight.venue, fight.analysis, this.ID));
+        });
+
+    }
+    addIntoArray(fight) {
+        this.arr.push(fight);
+
+        this.displayThemAll();
     }
 
-    getFightWithID(id){
-        this.arr.forEach(f => {
-            if(f.id === id)
-            {
-                return f;
-            }
+    arrLength() {
+        return this.element;
+    }
+
+    getFights() {
+        return Observable.create(observer => {
+            this.fetchData().subscribe(data => {
+                data.forEach(fight => {
+                    observer.next(new Fight(fight.id, fight.fighter1, fight.fighter2,
+                        fight.type, fight.date, fight.venue, fight.analysis, this.ID));
+                })
+            })
         })
     }
 
+    displayThemAll() {
+        const container = document.getElementById('showThem');
+        container.innerHTML = "";
+        this.element = 0;
+
+        let fight$ = this.getFights(); // vraca observer
+        console.log("VRACENI OBSERVER: " + fight$);
+        let sub = fight$
+            .subscribe(f => {
+                this.element++;
+                f.displayFight(container);
+            });
+    }
 
 }

@@ -7,23 +7,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beyond the octagon</title>
 
+    <!-- CSS -->
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div id="header" class="bg-light p-3">
-        <h1 class="text-center display-4">BEYOND THE OCTAGON</h1>
-    </div>
-    <section class="fight-section row">
 
-        <div id="fight-sec-left" class="col-md-6" style="border: 1px solid lightgrey;">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<body class="bg-dark text-light">
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top"
+        style="border-bottom: 2px solid white;  background-color: rgb(12, 12, 12, 0.9);">
+
+        <a class="mr-auto text-white h3" href="index.html" 
+            style="text-decoration-line: none">UFC <small>beyond the octagon</small></a>
+
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item">
+                <a class="nav-link text-white h5">Fighters</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white h5">About us</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <section 
+            style= "background-image: url('https://wallpapercave.com/wp/wp2797705.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 500px;
+            border-bottom: 4px solid white;">
+
+        
+    </section>
+
+
+    <section id="section-first" class="fight-section row p-5 mt-5">
+
+        <div id="fight-sec-left" class="col-md-6" style="border-right: 1px solid lightgrey;">
             <h3 class="text-center display-4">Already analyzed fights</h3>
-            <button id="btnShow" class="btn btn-danger m-3">Fights</button>
+            <div id="showThem" class="">
+
+            </div>
         </div>
-        <div id="fight-sec-right" class="col-md-6" style="border: 1px solid lightgrey;">
-            <h3 id="add-update"class="text-center display-4 mb-4">Add fight</h3>
+        <div id="fight-sec-right" class="col-md-6">
+            <h3 id="add-update" class="text-center display-4 mb-4">Add fight</h3>
 
             <div id="add-fight text-center">
 
@@ -32,32 +76,81 @@
                         placeholder="In the BLUE corner">
                 </div>
                 <div class="input-group mb-3">
-                    <input id="inp_fighter2" type="text" class="form-control mr-5 ml-5"
-                        placeholder="In the RED corner">
+                    <input id="inp_fighter2" type="text" class="form-control mr-5 ml-5" placeholder="In the RED corner">
                 </div>
                 <div class="input-group mb-3">
-                    <input id="inp_type" type="text" class="form-control mr-5 ml-5"
-                        placeholder="Title/non-title fight">
+                    <input id="inp_type" type="text" class="form-control mr-5 ml-5" placeholder="Title/non-title fight">
                 </div>
                 <div class="input-group mb-3">
-                    <input id="inp_date" type="input" class="form-control mr-5 ml-5"
-                        placeholder="Date">
+                    <input id="inp_date" type="input" class="form-control mr-5 ml-5" placeholder="Date">
                 </div>
                 <div class="input-group mb-3">
-                    <input id="inp_venue" type="text" class="form-control mr-5 ml-5"
-                        placeholder="Venue">
+                    <input id="inp_venue" type="text" class="form-control mr-5 ml-5" placeholder="Venue">
                 </div>
                 <div class="input-group mb-3">
-                    <textarea name="analiza" id="inp_analysis" cols="30" rows="5"
-                     class="form-control mr-5 ml-5" placeholder="Analysis"></textarea>
+                    <textarea name="analiza" id="inp_analysis" cols="30" rows="5" class="form-control mr-5 ml-5"
+                        placeholder="Analysis"></textarea>
                 </div>
-                <button id="btnAdd" class="btn btn-primary float-right" value=0;>Add fight</button>
+                <button id="btnAdd" class="btn  btn-outline-light float-right btn-lg" value=0;>Add fight</button>
 
             </div>
         </div>
     </section>
-    
 
+    <section id="find-fighters" class = "bg-white text-dark" style=" border-top: 5px solid rgb(12, 12, 12, 0.9);">
+        <p class="display-4 text-center"> FIND YOUR FAVORITE FIGHTER</p>
+
+        <div id="find-fighter" class="mr-auto row">
+
+            <div class="col-md-6">
+                search
+            </div>
+            <div class="col-md-6">
+                fighter
+             </div>
+
+            
+
+            </div>
+
+
+
+    </section>
+
+
+
+
+    <footer class="site-footer sticky-bottom" style="background-color: rgb(12, 12, 12, 0.9);">
+            <div class="container">
+              <div class="row">
+      
+                
+              </div>
+              <hr>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                  <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by ....
+                  </p>
+                  <p class="copyright-text">Damjan Mladenovic - Razvoj Web aplikacija
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="mt-2"> <b>VISIT AS</b></p>
+                    <div class="col ml-4">
+                        <p> <a href="" style="color:white;"> <i class="fab fa-twitter-square fa-3x"></i> </a> </p>
+                        
+                    </div>
+                    <div class="col">
+                        <p> <a href="" style="color:white;"> <i class="fab fa-facebook fa-3x"></i> </a> </p>
+                            
+                    </div>
+
+                </div>
+              </div>
+            </div>
+      </footer>
 
 </body>
 

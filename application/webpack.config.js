@@ -6,6 +6,13 @@ const config = {
       {
         test: /\.js$/,
         use: ["babel-loader"]
+      },
+      {
+        test:/\.css$/,
+        loader:[
+          require.resolve('style-loader'),
+          require.resolve('css-loader'),
+        ]
       }
       
     ]

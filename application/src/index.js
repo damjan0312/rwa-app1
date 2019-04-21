@@ -1,23 +1,17 @@
+
 import { Fight } from "../public/js/fight";
 import { MMAorganization } from "../public/js/mmaOrganization";
 import { DBService } from "../public/js/dbService";
 
 import { Observable, fromEvent, of, interval, pipe, from } from "rxjs";
 import { map } from 'rxjs/operators';
-import { take, share, publish, takeWhile, concatMap, delay, zip } from 'rxjs/operators';
+import { take, share, publish, takeWhile, concatMap, delay, zip, skip } from 'rxjs/operators';
+
 
 
 const organization = new MMAorganization(1);
-organization.getFights();
 
-/*const array = organization.arr;
-
-interval(1000)                                      ZASTO?????
-.pipe(
-  take(array.length),
-  map(i => array[i])
-)
-.subscribe(console.log); */
+organization.displayThemAll();
 
 
 
@@ -25,36 +19,22 @@ const btnShow = document.getElementById("btnShow");
 
 const fightDiv = document.getElementById("fight-sec-left");
 
-
-    var observable = interval(1000)
-    .pipe(
-        take(organization.arr.length),
-        map(f => organization.arr[f])
-    );
-
-    const sub = observable.subscribe(f => {
-        console.log("AHA" + f);
-    });
-
-
-
-const showFights$ = fromEvent(btnShow, 'click')
+/*const showFights$ = fromEvent(btnShow, 'click')
     .subscribe(
-        () => {
-            organization.arr.forEach(el => {
-                el.displayFight(fightDiv);
-                btnShow.disabled = true;
-            })
+     () => {
+                organization.arr
+                .forEach(el => {
+                    el.displayFight(fightDiv);
+                    btnShow.disabled = true;
+                })
         },
-        (err) => {
+     (err) => {
             console.log("Error: " + err)
-        },
-        () => {
-            console.log("completed")
         }
-    );
+    ); */
 
 const dbService = new DBService();
+
 const btnAdd = document.getElementById("btnAdd");
 
 const addFight$ = fromEvent(btnAdd, 'click')
@@ -68,16 +48,12 @@ const addFight$ = fromEvent(btnAdd, 'click')
             else {
                 console.log("Error");
             }
-
-
         },
         (err) => {
             console.log("Error: " + err)
-        },
-        () => {
-            console.log("completed")
         }
     );
+
 
 /*
 const fightt = new Fight(4, "sads", "fdsadsa", "dascsa", "dsadas", "dsadas", "dsadas", 1);
@@ -96,4 +72,3 @@ const probasub = probaclick.subscribe(() =>{
     fightt.change();
     console.log(source);
 }); */
-

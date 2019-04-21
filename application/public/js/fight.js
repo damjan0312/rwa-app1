@@ -2,6 +2,8 @@ import { fromEvent,interval, of } from "rxjs";
 import { DBService } from "./dbService";
 import { switchMap, mapTo, mergeMap} from "rxjs/operators";
 
+
+
 export class Fight{
     
     constructor(id, fighter1, fighter2, type, date, venue, analysis, org)
@@ -20,16 +22,16 @@ export class Fight{
     {
         let parent = container;
         let fight_div = document.createElement("div");
-        fight_div.className = "fight-div container-fluid";
+        fight_div.className = "fight-div container-fluid mt-4";
         parent.appendChild(fight_div);
 
         let innerHtml = '<h3>' + this.fighter1 + ' vs ' + this.fighter2  + '</h3> '+ 
-                        'venue: ' + this.venue + ' date: ' + this.date + ' analysis' +  this.analysis + '<br>';
+                        '<b>VENUE:</b> ' + this.venue + '<br> <b>DATE:</b> ' + this.date + '<br> <b>ANALYSIS:</b> ' +  this.analysis + '<br> ';
 
         fight_div.innerHTML = innerHtml;
 
         let btnUpdateAnalysis = document.createElement("button");
-        btnUpdateAnalysis.className = "btn btn-danger";
+        btnUpdateAnalysis.className = "btn btn-danger mt-2";
         btnUpdateAnalysis.id = "btnUpdate";
         btnUpdateAnalysis.innerHTML = "Update your analysis";
         btnUpdateAnalysis.value = this.id;
@@ -37,10 +39,13 @@ export class Fight{
 
 
         let btnDelete = document.createElement("button");
-        btnDelete.className = "btn btn-success ml-4";
+        btnDelete.className = "btn btn-success ml-4 mt-2";
         btnDelete.innerHTML = "Delete fight";
         btnDelete.id = "btnDelete";
+        btnDelete.value = this.id;
         fight_div.appendChild(btnDelete);
+
+        
 
 
         let btnAdd = document.getElementById("btnAdd");
@@ -67,6 +72,13 @@ export class Fight{
                 this.fillInputs();
                
             });
+
+        const deleteFight$ = fromEvent(btnDelete, "click")
+            .subscribe((ev) =>{
+                const dbService = new DBService();
+                dbService.delete(btnDelete.value);
+            });
+               
         
 
         
