@@ -24,50 +24,58 @@
 </head>
 
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
-<body class="bg-dark text-light">
+<body class="text-light" style="background-color: rgba(1, 10, 58, 0.9)">
     <!-- A grey horizontal navbar that becomes vertical on small screens -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top"
-        style="border-bottom: 2px solid white;  background-color: rgb(12, 12, 12, 0.9);">
+        style="border-bottom: 2px solid white;  background-color: rgba(26, 26, 26, 0.2);">
 
-        <a class="mr-auto text-white h3" href="index.html" 
-            style="text-decoration-line: none">UFC <small>beyond the octagon</small></a>
+        <a class="mr-auto text-white h3" href="index.html" style="text-decoration-line: none">UFC <small>beyond the
+                octagon</small></a>
 
         <ul class="navbar-nav ml-auto ">
             <li class="nav-item">
-                <a class="nav-link text-white h5">Fighters</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white h5">About us</a>
+                <a class="nav-link text-white h5"  href="index.html#find-fighters">Fighters</a>
             </li>
 
         </ul>
     </nav>
 
-    <section 
-            style= "background-image: url('https://wallpapercave.com/wp/wp2797705.jpg');
+    <section style="background-image: url('https://wallpapercave.com/wp/wp2797705.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
             min-height: 500px;
             border-bottom: 4px solid white;">
+        <div class="p-5">
+            <div class="d-flex">
+                <h1 class="display-4 ml-auto font-weight-bold mt-5" style="color: rgba(255, 255, 255, 0.712)"> CHECK STATISTICS</h1>
+            </div>
+            <div class="d-flex">
+                <h1 class="display-4 ml-auto font-weight-bold"> AND </h1>
+            </div>
+            <div class="d-flex">
+                <h1 class="display-4 ml-auto font-weight-bold"> ANALYZE FIGHTS </h1>
+            </div>
+        </div>
 
-        
     </section>
 
 
     <section id="section-first" class="fight-section row p-5 mt-5">
 
         <div id="fight-sec-left" class="col-md-6" style="border-right: 1px solid lightgrey;">
-            <h3 class="text-center display-4">Already analyzed fights</h3>
-            <div id="showThem" class="">
+            <h3 class="text-center display-4 text-nowrap" style="font-size: 50px;">ALREADY ANALYZED FIGHTS</h3>
+          
+            <div id="showThem" >
 
             </div>
         </div>
         <div id="fight-sec-right" class="col-md-6">
-            <h3 id="add-update" class="text-center display-4 mb-4">Add fight</h3>
+            <h3 id="add-update" class="text-center display-4 mb-4" >ADD FIGHT</h3>
 
             <div id="add-fight text-center">
 
@@ -97,21 +105,34 @@
         </div>
     </section>
 
-    <section id="find-fighters" class = "bg-white text-dark" style=" border-top: 5px solid rgb(12, 12, 12, 0.9);">
-        <p class="display-4 text-center"> FIND YOUR FAVORITE FIGHTER</p>
+    <section id="find-fighters" class="bg-white text-dark" style=" border-top: 5px solid rgb(12, 12, 12, 0.9); min-height: 500px;">
+        <p class="display-4 text-center mt-2"> FIND YOUR FAVORITE FIGHTER</p>
 
         <div id="find-fighter" class="mr-auto row">
 
-            <div class="col-md-6">
-                search
-            </div>
-            <div class="col-md-6">
-                fighter
-             </div>
+            <div class="col-md-6" style="border-top: 2px solid darkgray;">
+                <h1 class="display-4 text-center"> SEARCH</h1>
 
-            
+                <h5 class="ml-5 mt-4">Search your fighter by name or weight division </h5>
+
+                <div class="input-group mb-3">
+                    <input id="inpSearchByName" type="text" class="form-control mr-5 ml-5" placeholder="Name">
+                </div>
+
 
             </div>
+            <div class="col-md-6 text-center">
+                <h1 class="display-4" style="border-top: 2px solid darkgray;"> FIGHTERS</h1>
+
+                <div id="divForFighter" class="row ">
+
+                </div>
+
+            </div>
+
+
+
+        </div>
 
 
 
@@ -121,36 +142,36 @@
 
 
     <footer class="site-footer sticky-bottom" style="background-color: rgb(12, 12, 12, 0.9);">
-            <div class="container">
-              <div class="row">
-      
-                
-              </div>
-              <hr>
+        <div class="container">
+            <div class="row">
+
+
             </div>
-            <div class="container">
-              <div class="row">
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                  <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by ....
-                  </p>
-                  <p class="copyright-text">Damjan Mladenovic - Razvoj Web aplikacija
+                    <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by ....
+                    </p>
+                    <p class="copyright-text">Damjan Mladenovic - Razvoj Web aplikacija
                     </p>
                 </div>
                 <div class="row">
                     <p class="mt-2"> <b>VISIT AS</b></p>
                     <div class="col ml-4">
                         <p> <a href="" style="color:white;"> <i class="fab fa-twitter-square fa-3x"></i> </a> </p>
-                        
+
                     </div>
                     <div class="col">
                         <p> <a href="" style="color:white;"> <i class="fab fa-facebook fa-3x"></i> </a> </p>
-                            
+
                     </div>
 
                 </div>
-              </div>
             </div>
-      </footer>
+        </div>
+    </footer>
 
 </body>
 

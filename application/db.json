@@ -7,18 +7,70 @@
       "type": "Interim lightweight title",
       "date": "2019-04-4",
       "venue": "State Farm Venue, Atlanta",
-      "analysis": "excellent fight really. Dustin better again!!!",
+      "analysis": "excellent fight really. Dustin better again!!! Interim title on the line",
       "mmaOrganization": 1
     },
     {
-      "id": "3",
-      "fighter1": "Eryk Anders",
-      "fighter2": "Khalil Rountree Jr.",
-      "type": "non-title fight",
-      "date": "2019-04-4",
-      "venue": "State Farm Venue, Atlanta",
-      "analysis": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "id": 2,
+      "fighter1": "Khabib Nurmagomedov",
+      "fighter2": "Conor Mcgregor",
+      "type": "Lightweight title",
+      "date": "2018-10-06",
+      "venue": "MGM Grand",
+      "analysis": "Great fight",
       "mmaOrganization": 1
+    }
+  ],
+  "fighters": [
+    {
+      "id": 1,
+      "firstName": "Georges",
+      "lastName": "St-Pierre",
+      "weightClass": "welterweight",
+      "totalStrikesLanded": "2.591",
+      "takeDownsLanded": "90",
+      "knockDowns": "9",
+      "picture": "https://cdn.vox-cdn.com/thumbor/UH1fYMu73uUhM8xlY-eFs1BgYr8=/0x0:3966x3030/1200x800/filters:focal(1592x501:2226x1135)/cdn.vox-cdn.com/uploads/chorus_image/image/61517047/usa_today_10392986.0.jpg"
+    },
+    {
+      "id": 2,
+      "firstName": "Frankie",
+      "lastName": "Edgar",
+      "weightClass": "lightweight",
+      "totalStrikesLanded": "2.099",
+      "takeDownsLanded": "67",
+      "knockDowns": "3",
+      "picture": "http://www.mmanovost.com/wp-content/uploads/2018/01/frankie-edgar-3-2-752x501.jpg"
+    },
+    {
+      "id": 3,
+      "firstName": "Conor",
+      "lastName": "McGregor",
+      "weightClass": "lightweight",
+      "totalStrikesLanded": "1.023",
+      "takeDownsLanded": "4",
+      "knockDowns": "11",
+      "picture": "https://i2-prod.mirror.co.uk/incoming/article7504142.ece/ALTERNATES/s615/Conor-McGregor-vs-Nate-Diaz.jpg"
+    },
+    {
+      "id": 4,
+      "firstName": "Daniel",
+      "lastName": "Cormier",
+      "weightClass": "heavyweight",
+      "totalStrikesLanded": "1.023",
+      "takeDownsLanded": "75",
+      "knockDowns": "11",
+      "picture": "https://cdn.vox-cdn.com/thumbor/FPSOpfmedV1IeXfL9JsZd2IPtbY=/0x0:2000x1333/1200x800/filters:focal(980x184:1300x504)/cdn.vox-cdn.com/uploads/chorus_image/image/61742823/083_Daniel_Cormier_vs_Alexander_Gustafsson.0.0.jpg"
+    },
+    {
+      "id": 5,
+      "firstName": "Jon",
+      "lastName": "Jones",
+      "weightClass": "lightheavyweight",
+      "totalStrikesLanded": "1.023",
+      "takeDownsLanded": "75",
+      "knockDowns": "11",
+      "picture": "https://www.gannett-cdn.com/presto/2018/09/04/USAT/0b7c58c2-767f-473f-95fc-6d743567fe06-XXX_C01_Jon_Jones.jpg?crop=3330,1873,x0,y0&width=3200&height=1680&fit=bounds"
     }
   ]
 }

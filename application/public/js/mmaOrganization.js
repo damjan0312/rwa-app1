@@ -39,6 +39,7 @@ export class MMAorganization {
     }
 
     arrLength() {
+
         return this.element;
     }
 

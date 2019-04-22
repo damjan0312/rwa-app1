@@ -7,7 +7,7 @@ export class DBService{
 
     
 
-    add(organization)
+    async add(organization)
     {
         let fighter1 = document.getElementById("inp_fighter1").value;
         let fighter2 = document.getElementById("inp_fighter2").value;
@@ -20,15 +20,18 @@ export class DBService{
 
         let newFight = new Fight(15, fighter1, fighter2, type, date, venue, analysis, mmaOrganization);
 
+        console.log(newFight);
+
         let fightID= organization.arrLength() + 1; //organization.arr.length+1;
 
         console.log("ID: " + fightID);
 
-        fetch("http://localhost:3000/fights", {
+       await fetch("http://localhost:3000/fights", {
             method: 'post',
-            headers: {
+            headers: new Headers({
+                
                 'Content-Type': 'application/json'
-            },
+            }),
             body: JSON.stringify({
                 id: fightID,
                 fighter1: fighter1,
@@ -44,12 +47,38 @@ export class DBService{
             console.log("ADDING SUCCESS!!!!");
             organization.addIntoArray(newFight);
         })
-        .catch(response => { console.log(response) })
+        .catch(response => { console.log("RESPONSE JE: " + response) }) 
+        const url = "http://localhost:3000/fights/";
+
+    /*    const settings = {
+            method: 'POST',
+            headers: new Headers({
+            }),
+            body: JSON.stringify({
+                id: fightID,
+                fighter1: fighter1,
+                fighter2: fighter2,
+                type:type,
+                date: date,
+                venue: venue,
+                analysis: analysis,
+                mmaOrganization: mmaOrganization
+            })
+        };
+
+        try {
+            const response = await fetch(url, settings);
+            const json = await response.json();
+            console.log(json);
+            return json;
+        } catch (error) {
+            console.log(error);
+            return error;       }; */
         
     }
 
 
-    update(organization, id)
+    async update(organization, id)
     {
         let fighter1 = document.getElementById("inp_fighter1").value;
         let fighter2 = document.getElementById("inp_fighter2").value;
@@ -61,7 +90,7 @@ export class DBService{
 
         let url = 'http://localhost:3000/fights/' + id;
 
-        fetch(url, {
+        await fetch(url, {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'
@@ -85,13 +114,11 @@ export class DBService{
         
     }
 
-    delete(id) {
+    async delete(id) {
 
         let url = 'http://localhost:3000/fights/' + id;
 
-        console.log();
-
-            fetch(url, {
+        await  fetch(url, {
                 method: 'delete',
                 headers: {
                     'Accept': 'application/json',

@@ -4,8 +4,8 @@ import { MMAorganization } from "../public/js/mmaOrganization";
 import { DBService } from "../public/js/dbService";
 
 import { Observable, fromEvent, of, interval, pipe, from } from "rxjs";
-import { map } from 'rxjs/operators';
-import { take, share, publish, takeWhile, concatMap, delay, zip, skip } from 'rxjs/operators';
+import { ajax } from 'rxjs/ajax';
+import { map, take, delay, zip, skip, tap, debounceTime, switchMap, mergeMap, distinctUntilChanged, catchError, filter } from 'rxjs/operators';
 
 
 
@@ -55,20 +55,38 @@ const addFight$ = fromEvent(btnAdd, 'click')
     );
 
 
-/*
-const fightt = new Fight(4, "sads", "fdsadsa", "dascsa", "dsadas", "dsadas", "dsadas", 1);
-// pravim objekat
-const source = of(fightt);
-console.log(source);
-// pravim observable od objekta
-const dugme = document.getElementById("proba");
-// dugme proba
-console.log(source);
+const searchByName = document.getElementById("inpSearchByName");
+const divForFighter = document.getElementById("divForFighter");
 
-const probaclick = fromEvent(proba, "click");
+const search$ = fromEvent(searchByName, 'input')
+        .pipe(
+            map(e => e.target.value),
+            debounceTime(1000),
+            distinctUntilChanged(),
+            tap(() => (divForFighter.innerHTML = '')),
+            filter(fighter => !!fighter),
+            switchMap(fighter => 
+                ajax.getJSON("http://localhost:3000/fighters?q=" + fighter)
+                .pipe(catchError(err=> EMPTY))
+                ),
+            mergeMap(fighters => fighters),
+            tap(console.log, console.warn)
+        )
+        .subscribe(fighter => {
 
-const probasub = probaclick.subscribe(() =>{
-    //NA KLIK MENJAM FIGHT I LOGUJEM OBSERVABLE KOJI JE UHVATIO PROMENU
-    fightt.change();
-    console.log(source);
-}); */
+            const fighterDiv = document.createElement('div');
+
+            fighterDiv.innerHTML = '<div class="card col-sm-12 ml-5 mt-3 text-center" style="width: 18rem;">'+
+            '<img class="card-img-top" src="'+fighter.picture+'" alt = "Card image cap">'+
+            '<div class="card-body">'+
+             '<h5 class="card-title"> ' + fighter.firstName + " " + fighter.lastName + ' </h5>'+
+             '<p class="card-text">Weight division: ' + fighter.weightClass + '</p>' +
+             '<p class="card-text">Total strikes landed: ' + fighter.totalStrikesLanded +'</p>' +
+             '<p class="card-text">Total take downs landed: ' + fighter.takeDownsLanded + '</p>' +
+             '<p class="card-text">Total career knockdowns: ' + fighter.knockDowns + '</p>' +
+            '</div>'+
+            '</div>';
+
+            divForFighter.appendChild(fighterDiv);
+            
+        })
