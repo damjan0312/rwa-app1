@@ -7,7 +7,7 @@
       "type": "Interim lightweight title",
       "date": "2019-04-4",
       "venue": "State Farm Venue, Atlanta",
-      "analysis": "excellent fight really. Dustin better again!!! Interim title on the line",
+      "analysis": "Dustin Poirier via unanimous decision, new Interim Lightweight Champion. Max Holloway remains featherweight champion. Referee Herb Dean was close to stopping the fight when Dustin had Max Holloway in a lot of trouble but Max showed what kind of warrior he is and stayed on his feet. Not only that, he won next two rounds on the judges score cards but that was not enough. Dustin Poirier won the fifth and took that belt home.",
       "mmaOrganization": 1
     },
     {
@@ -17,7 +17,17 @@
       "type": "Lightweight title",
       "date": "2018-10-06",
       "venue": "MGM Grand",
-      "analysis": "Great fight",
+      "analysis": "Khabib Nurmagomedov defends his title against Conor Mcgregor via Submission (neck-crank) in round 4. First title defense for the Eagle, Khabib Nurmagomedov remains undefeated at 27-0.",
+      "mmaOrganization": 1
+    },
+    {
+      "id": 3,
+      "fighter1": "Daniel Cormier",
+      "fighter2": "Jon Jones",
+      "type": "Light heavyweight",
+      "date": "2145214",
+      "venue": "MGM GRAND",
+      "analysis": "Jon Jones via KO (head kick and punches) in round 3. Jones is the light heavyweight king once again. He remains the only man to beat Daniel Cormier.",
       "mmaOrganization": 1
     }
   ],
@@ -71,6 +81,47 @@
       "takeDownsLanded": "75",
       "knockDowns": "11",
       "picture": "https://www.gannett-cdn.com/presto/2018/09/04/USAT/0b7c58c2-767f-473f-95fc-6d743567fe06-XXX_C01_Jon_Jones.jpg?crop=3330,1873,x0,y0&width=3200&height=1680&fit=bounds"
+    },
+    {
+      "id": 6,
+      "firstName": "Nate",
+      "lastName": "Diaz",
+      "weightClass": "lightweight",
+      "totalStrikesLanded": "1.023",
+      "takeDownsLanded": "75",
+      "knockDowns": "11",
+      "picture": "https://akathailand.com/aka-media/2017/07/Nate-2.jpg"
+    },
+    {
+      "id": 7,
+      "firstName": "Donald Cowboy",
+      "lastName": "Cerrone",
+      "weightClass": "lightweight",
+      "totalStrikesLanded": "1.023",
+      "takeDownsLanded": "75",
+      "knockDowns": "11",
+      "picture": "https://cdn.vox-cdn.com/thumbor/9vAav2riArMe0WLHM14s2S0pbuU=/0x0:3893x2595/1200x800/filters:focal(1636x987:2258x1609)/cdn.vox-cdn.com/uploads/chorus_image/image/62648774/usa_today_10905785.0.jpg"
+    }
+    ,
+    {
+      "id": 8,
+      "firstName": "Cain",
+      "lastName": "Velasquez",
+      "weightClass": "heavyweight",
+      "totalStrikesLanded": "1.023",
+      "takeDownsLanded": "75",
+      "knockDowns": "11",
+      "picture": "https://cdn.vox-cdn.com/thumbor/o30c_KPBLgev0ehWeRzPT2sRCcE=/0x0:1100x733/1200x800/filters:focal(395x228:571x404)/cdn.vox-cdn.com/uploads/chorus_image/image/52505261/085_Cain_Velasquez_vs_Antonio_Silva.0.jpeg"
+    },
+    {
+      "id": 9,
+      "firstName": "Khabib",
+      "lastName": "Nurmagomedov",
+      "weightClass": "lightweight",
+      "totalStrikesLanded": "1.023",
+      "takeDownsLanded": "75",
+      "knockDowns": "11",
+      "picture": "https://cdn.vox-cdn.com/thumbor/JZg_KPW0H5ELpEPLZ9oxtkqmC0A=/0x0:1920x1280/1200x800/filters:focal(1041x39:1347x345)/cdn.vox-cdn.com/uploads/chorus_image/image/59233057/072_Khabib_Nurmagomedov_vs_Edson_Barboza.0.jpg"
     }
   ]
 }

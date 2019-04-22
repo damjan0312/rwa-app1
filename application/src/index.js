@@ -76,7 +76,7 @@ const search$ = fromEvent(searchByName, 'input')
 
             const fighterDiv = document.createElement('div');
 
-            fighterDiv.innerHTML = '<div class="card col-sm-12 ml-5 mt-3 text-center" style="width: 18rem;">'+
+            fighterDiv.innerHTML = '<div class="card col-sm-12 ml-5 mt-3 text-center mb-3" style="width: 18rem;">'+
             '<img class="card-img-top" src="'+fighter.picture+'" alt = "Card image cap">'+
             '<div class="card-body">'+
              '<h5 class="card-title"> ' + fighter.firstName + " " + fighter.lastName + ' </h5>'+
