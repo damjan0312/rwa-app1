@@ -22,7 +22,17 @@ export class DBService{
 
         console.log(newFight);
 
-        let fightID= organization.arrLength() + 1; //organization.arr.length+1;
+       let fightID = 1; //= organization.arrLength() + 1; //organization.arr.length+1;
+
+       for(var e of organization.IDs){
+           if(fightID === e){
+               fightID++;
+           }
+       }
+
+     
+
+       console.log(organization.IDs.length);
 
         console.log("ID: " + fightID);
 
@@ -44,8 +54,7 @@ export class DBService{
             })
         })
         .then(response => {
-            console.log("ADDING SUCCESS!!!!");
-            organization.addIntoArray(newFight);
+            organization.addIntoArray(newFight, fightID);
         })
         .catch(response => { console.log("RESPONSE JE: " + response) }) 
         const url = "http://localhost:3000/fights/";
@@ -127,12 +136,12 @@ export class DBService{
             })
             .then(response => {
                 console.log("DELETE SUCCESS!!!!");
-                var organization = new MMAorganization(1);
-                organization.displayThemAll();
+                var org = new MMAorganization(2);
+                org.displayThemAll();
             })
             .catch(err => console.log(err)) 
-        
     }
 
 
 }
+

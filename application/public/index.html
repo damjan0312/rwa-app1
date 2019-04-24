@@ -21,6 +21,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+        <!-- FONTS GOOGLE -->
+        <link href="https://fonts.googleapis.com/css?family=Heebo|Montserrat|PT+Sans|Rubik" rel="stylesheet">
 </head>
 
 
@@ -54,8 +57,8 @@
             border-bottom: 4px solid white;">
         <div class="text-center">
 
-            <div class="p-1" style="background-color: rgba(210,10,10, 0.9)">
-                <h1 class="display-4 text-uppercase font-weight-normal" style="color: white">
+            <div class="p-1" style="background-color: rgba(210,10,10, 0.9);">
+                <h1 class="display-4 text-uppercase font-weight-normal " style="color: white;  font-size: 45px;">
                     Follow fighters <b> statistics </b>  and <b> analyze</b>  fights
                 </h1>
 
@@ -69,9 +72,9 @@
     <section id="section-first" class="fight-section row p-3 mt-3">
 
         <div id="fight-sec-left" class="col-md-6" style="border-right: 1px solid lightgrey;">
-            <h3 class="text-center display-4 text-nowrap" style="font-size: 50px; color: rgba(210,10,10);">ALREADY ANALYZED FIGHTS</h3>
+            <h3 class="text-center display-4 " style="font-size: 50px; color: rgba(210,10,10);">ALREADY ANALYZED FIGHTS</h3>
           
-            <div id="showThem" >
+            <div id="showThem" style="font-family:Rubik" >
 
             </div>
         </div>
@@ -101,6 +104,8 @@
                         placeholder="Analysis"></textarea>
                 </div>
                 <button id="btnAdd" class="btn  btn-outline-light float-right btn-lg" value=0;>Add fight</button>
+
+                <label for="" id="id_label" hidden></label>
 
             </div>
         </div>

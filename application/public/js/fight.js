@@ -16,7 +16,9 @@ export class Fight{
         this.venue = venue;
         this.analysis = analysis;
         this.org = org;
+
     }
+
 
     displayFight(container)
     {
@@ -44,9 +46,6 @@ export class Fight{
         btnDelete.id = "btnDelete";
         btnDelete.value = this.id;
         fight_div.appendChild(btnDelete);
-
-        
-
 
         let btnAdd = document.getElementById("btnAdd");
         let lab = document.getElementById("add-update");

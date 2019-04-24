@@ -1,7 +1,7 @@
 import { FightService } from './dbService';
 import { Fight } from './fight';
-import { Observable, of, from } from "rxjs";
-import { flatMap, skip } from "rxjs/operators"
+import { Observable, of, from, interval } from "rxjs";
+import { flatMap, skip, map } from "rxjs/operators"
 
 export const url = "http://localhost:3000/fights";
 
@@ -10,7 +10,8 @@ export class MMAorganization {
     constructor(id) {
         this.arr = [];
         this.ID = id;
-        this.element = 0; // broj elemenata u nizu
+        this.element = 0;
+        this.IDs= [];
     }
 
     fetchData() {
@@ -32,8 +33,9 @@ export class MMAorganization {
         });
 
     }
-    addIntoArray(fight) {
+    addIntoArray(fight, fightID) {
         this.arr.push(fight);
+        this.IDs.push(fightID);
 
         this.displayThemAll();
     }
@@ -59,13 +61,24 @@ export class MMAorganization {
         container.innerHTML = "";
         this.element = 0;
 
-        let fight$ = this.getFights(); // vraca observer
-        console.log("VRACENI OBSERVER: " + fight$);
+        let fight$ = this.getFights();// vraca observable
         let sub = fight$
             .subscribe(f => {
                 this.element++;
                 f.displayFight(container);
             });
+    }
+
+    keepTrackOfIDs(value){
+        this.IDs.push(value);
+    }
+    removeFromIDs(value){
+        for( var i = 0; i < IDs.length; i++){ 
+            if ( IDs[i] === value) {
+                IDs.splice(i, 1); 
+            }
+         }
+         
     }
 
 }

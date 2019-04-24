@@ -1,13 +1,13 @@
 {
-  "fights": [
-    {
+  "fights": [{
+    
       "id": "1",
       "fighter1": "Max Holloway",
       "fighter2": "Dustin Poirier",
       "type": "Interim lightweight title",
       "date": "2019-04-4",
       "venue": "State Farm Venue, Atlanta",
-      "analysis": "Dustin Poirier via unanimous decision, new Interim Lightweight Champion. Max Holloway remains featherweight champion. Referee Herb Dean was close to stopping the fight when Dustin had Max Holloway in a lot of trouble but Max showed what kind of warrior he is and stayed on his feet. Not only that, he won next two rounds on the judges score cards but that was not enough. Dustin Poirier won the fifth and took that belt home.",
+      "analysis": "Dustin Poirier via unanimous decision, new Interim Lightweight Champion. Max Holloway remains featherweight champion. Referee Herb Dean was close to stopping the fight when Dustin had Max Holloway in a lot of trouble, in the first round, but Max showed what kind of warrior he is and stayed on his feet. Not only that, he won next two rounds on the judges score cards but that was not enough. Dustin Poirier won the fifth and took that belt home.",
       "mmaOrganization": 1
     },
     {
@@ -101,8 +101,7 @@
       "takeDownsLanded": "75",
       "knockDowns": "11",
       "picture": "https://cdn.vox-cdn.com/thumbor/9vAav2riArMe0WLHM14s2S0pbuU=/0x0:3893x2595/1200x800/filters:focal(1636x987:2258x1609)/cdn.vox-cdn.com/uploads/chorus_image/image/62648774/usa_today_10905785.0.jpg"
-    }
-    ,
+    },
     {
       "id": 8,
       "firstName": "Cain",
