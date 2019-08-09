@@ -1,6 +1,6 @@
 {
-  "fights": [{
-    
+  "fights": [
+    {
       "id": "1",
       "fighter1": "Max Holloway",
       "fighter2": "Dustin Poirier",
@@ -18,16 +18,6 @@
       "date": "2018-10-06",
       "venue": "MGM Grand",
       "analysis": "Khabib Nurmagomedov defends his title against Conor Mcgregor via Submission (neck-crank) in round 4. First title defense for the Eagle, Khabib Nurmagomedov remains undefeated at 27-0.",
-      "mmaOrganization": 1
-    },
-    {
-      "id": 3,
-      "fighter1": "Daniel Cormier",
-      "fighter2": "Jon Jones",
-      "type": "Light heavyweight",
-      "date": "2145214",
-      "venue": "MGM GRAND",
-      "analysis": "Jon Jones via KO (head kick and punches) in round 3. Jones is the light heavyweight king once again. He remains the only man to beat Daniel Cormier.",
       "mmaOrganization": 1
     }
   ],
